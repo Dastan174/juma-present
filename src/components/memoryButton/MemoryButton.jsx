@@ -3,7 +3,7 @@ import { useState } from "react";
 import ModalVideo from "../../shared/modalVideo/ModalVideo";
 import "./memoryButton.css";
 
-export default function MemoryButton() {
+export default function MemoryButton({ onClose }) {
   const [open, setOpen] = useState(false);
 
   return (
