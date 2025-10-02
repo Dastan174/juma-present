@@ -81,7 +81,7 @@ export default function Home() {
             <Image fill src="/story.jpg" alt="love" />
           </div>
           <OpenChat />
-          <div className={styles.img}>
+          <div className={styles.img2}>
             <Image fill src="/four.png" alt="love" />
           </div>
           {showMemory && (
