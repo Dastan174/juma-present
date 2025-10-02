@@ -3,10 +3,12 @@ import styles from "./page.module.css";
 import OpenChat from "../components/openChat/OpenChat";
 import Slider from "../components/slider/Slider";
 import LastChat from "../components/lastChat/LastChat";
+import MemoryButton from "../components/memoryButton/MemoryButton";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
 export default function Home() {
+  const [showMemory, setShowMemory] = useState(true);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [showRest, setShowRest] = useState(false); // состояние для остальных блоков
 
@@ -71,6 +73,9 @@ export default function Home() {
       {/* Остальные блоки только если showRest === true */}
       {showRest && (
         <>
+          {showMemory && (
+            <MemoryButton onClose={() => setShowMemory(false)} /> // ✅ передаем функцию
+          )}
           <OpenChat />
           <Slider />
           <LastChat />
