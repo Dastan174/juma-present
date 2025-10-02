@@ -73,23 +73,26 @@ export default function Home() {
       {/* Остальные блоки только если showRest === true */}
       {showRest && (
         <>
-          {showMemory && (
-            <MemoryButton onClose={() => setShowMemory(false)} /> // ✅ передаем функцию
-          )}
-          <OpenChat />
-          <Slider />
-          <LastChat />
-          <div className={styles.img}>
-            <Image fill src="/distance.jpg" alt="love" />
-          </div>
-          <div className={styles.img2}>
-            <Image fill src="/love-song.jpg" alt="love" />
-          </div>
           <div className={styles.img3}>
             <Image fill src="/scroll.jpg" alt="love" />
           </div>
+          <Slider />
           <div className={styles.img}>
             <Image fill src="/story.jpg" alt="love" />
+          </div>
+          <OpenChat />
+          <div className={styles.img}>
+            <Image fill src="/four.png" alt="love" />
+          </div>
+          {showMemory && (
+            <MemoryButton onClose={() => setShowMemory(false)} /> // ✅ передаем функцию
+          )}
+          <div className={styles.img}>
+            <Image fill src="/distance.jpg" alt="love" />
+          </div>
+          <LastChat />
+          <div className={styles.img2}>
+            <Image fill src="/love-song.jpg" alt="love" />
           </div>
         </>
       )}

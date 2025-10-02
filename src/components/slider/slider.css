@@ -14,7 +14,7 @@
 .quotes-wrapper {
   display: inline-flex;
   gap: 20px;
-  animation: slide 60s linear infinite 18s; /* автопрокрутка */
+  animation: slide 60s linear infinite 13s; /* автопрокрутка */
 }
 
 /* Каждая карточка */
